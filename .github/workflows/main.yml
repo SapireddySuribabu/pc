@@ -1,12 +1,15 @@
-name: CI
-
+name: Manual workflow
 on:
-  workflow_dispatch:
+  workflow_call:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
 
 jobs:
  
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest 
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js
