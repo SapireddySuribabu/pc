@@ -64,9 +64,9 @@ jobs:
       - name: make build
         run:
          make build
-#       - name: make push
-#         run:
-#          make push
+      - name: make push
+        run:
+         make push
   Deploy:
     needs: [Image]
     runs-on: ubuntu-latest
