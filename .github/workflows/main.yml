@@ -40,7 +40,7 @@ jobs:
 #            npm run lint        
   Testing:
     needs: [build]
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
        - name: build-artifact
          uses: actions/download-artifact@main
@@ -51,7 +51,7 @@ jobs:
 #          run: npm run lint
   Image:
     needs: [Testing]
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -73,7 +73,7 @@ jobs:
 #          make push
   Deploy:
     needs: [Image]
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
