@@ -16,10 +16,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.2.0'
-      - name: npm start
+      - name: npm install
         run: |
            npm install autoprefixer@10.4.5 --save-exact
-           npm run start
+           npm install
       - run: mkdir -p path     
       - run: echo hello > path/test.txt
       - uses: actions/upload-artifact@main
