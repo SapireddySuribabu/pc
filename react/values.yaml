@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ravishan123/aws
+  repository: surya3431/aws
   tag: latest
   pullPolicy: IfNotPresent
 
