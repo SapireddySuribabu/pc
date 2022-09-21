@@ -8,7 +8,7 @@ data:
     - "groups":
       - "system:masters"
       "userarn": "arn:aws:iam::779527285137:role/AWSdevopscerttaskrole"
-      "username": "ravi@bootlabstech.com"
+      "username": "suribabu@bootlabstech.com"
 kind: ConfigMap
 metadata:
   name: aws-auth
